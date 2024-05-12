@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9th assignment JS Arrays</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    button {
+        margin-bottom: 5px;
+    }
+</style>
+
+<body>
+
+    <h3>String Arrays</h3>
+    <p id="initializedarrays1"> </p>
+    <h3>Number Array</h3>
+    <p id="initializedarrays2"></p>
+    <h3>Boeleon Array</h3>
+    <p id="initializedarrays3"></p>
+    <h3>Mixed Array</h3>
+    <p id="initializedarrays4"></p>
+
+    <h2> Task 1</h2>
+    <p>write all the degree grades in Array like ssc hsc </p>
+    <button onclick="myFuntion()">click me to run the function</button>
+    <p id="Task1-array"></p>
+
+    <h2>Task 2</h2>
+    <p>Write a program to store 3 student names in an array.Take
+        another array to store score of these three students. <br>
+        Assume that total marks are 500 for each student, display
+        the scores & percentages of students like:</p>
+    <button onclick="myFuntion2()">click me to run the Task</button>
+    <p id="task-2-p1"></p>
+    <p id="task-2-p2"></p>
+    <p id="task-2-p3"></p>
+    <h2>Task 3</h2>
+    <p>
+    <pre>
+ Initialize an array with color names. Display the array
+elements in your browser.
+a. Ask the user what color he/she wants to add to the
+beginning & add that color to the beginning of the array.
+Display the updated array in your browser.
+b. Ask the user what color he/she wants to add to the end
+& add that color to the end of the array. Display the
+updated array in your browser.
+c. Add two more color to the beginning of the array.
+Display the updated array in your browser.
+d. Delete the first color in the array. Display the updated
+array in your browser.
+e. Delete the last color in the array. Display the updated
+array in your browser.
+f. Ask the user at which index he/she wants to add a color
+& color name. Then add the color to desired
+position/index. . Display the updated array in your
+browser.
+g. Ask the user at which index he/she wants to delete
+color(s) & how many colors he/she wants to delete. Then
+remove the same number of color(s) from user-defined
+position/index. . Display the updated array in your
+browser.
+</pre>
+    </p>
+    <p id="first-array" style="width: 30%; margin: auto; margin-top: 10px; margin-bottom: 10px;"></p>
+    <button onclick="myFuntion3()">click me to add color at start point</button>
+    <p id="second-array-by-user" style="width: 30%; margin: auto; margin-top: 10px; margin-bottom: 10px;"></p>
+    <button onclick="myFuntion31()">click me to add a color at the End</button>
+    <p id="third-array-by-user" style="width: 30%; margin: auto; margin-top: 10px;"></p>
+    <button onclick="myFuntion32()">click me to add two colors at the beginig </button>
+    <p id="fourth-array" style="width: 30%; margin: auto; margin-top: 10px;"></p>
+    <button onclick="myFuntion33()">click me to remove one color at the beginig </button>
+    <p id="fifth-array" style="width: 30%; margin: auto; margin-top: 10px;"></p>
+    <button onclick="myFuntion34()">click me to remove one color from the last </button>
+    <p id="sixth-array" style="width: 30%; margin: auto; margin-top: 10px;"></p>
+    <button onclick="myFuntion35()">click me to add the color at the specific point of the array </button>
+    <p id="seventh-array" style="width: 30%; margin: auto; margin-top: 10px;"></p>
+    <button onclick="myFuntion36()">click me to delete the color at the specific point of the array </button>
+    <p id="eighth-array" style="width: 30%; margin: auto; margin-top: 10px;"></p>
+
+    <h2>Task 4</h2>
+    <p>Write a program to store student scores in an array & <br>
+        sort the array in ascending order using Array’s sort
+        method.</p>
+    <p>The score array: <span id="task-4-array"></span></p>
+    <button onclick="myFuntion4()">click me to sort the array in Ascending order </button>
+    <p id="task-4-p"></p>
+
+    <h2>Task 5</h2>
+    <p>Write a program to create a single string from the
+        below mentioned array: <br>
+        var arr = [“This ”, “ is ”, “ my ”, “ cat”];
+        (Use array’s join method)</p>
+    <button onclick="myFuntion5()">click me to run the Task </button>
+    <p id="task-5-p"></p>
+
+    <h2>Task 6</h2>
+    <p> Write a program to store phone manufacturers (Apple,
+        Samsung, Motorola, Nokia, Sony & Haier) in an array. <br>
+        Then show the array elements in the dropdown menue </p>
+    <button onclick="myFuntion6()">click me to run the Task </button> <br>
+    <select name="phone-Manufucturer" id="phone-Manufucturer">
+        <option value="" id="manufucterurCompanie1"></option>
+        <option value="" id="manufucterurCompanie2"></option>
+        <option value="" id="manufucterurCompanie3"></option>
+        <option value="" id="manufucterurCompanie4"></option>
+        <option value="" id="manufucterurCompanie5"></option>
+        <option value="" id="manufucterurCompanie6"></option>
+    </select>
+
+    <script>
+        const emptyArray = [];
+        console.log(emptyArray);
+        const emptyArray2 = new Array();
+        console.log(emptyArray2);
+        const stringArray = ["me", "you", "he", "they", "etc"];
+        document.getElementById("initializedarrays1").innerText = stringArray;
+        const numberArray = ["2", "7", "80", "10", "15"];
+        document.getElementById("initializedarrays2").innerText = numberArray;
+        const booleonArray = [true, false];
+        document.getElementById("initializedarrays3").innerText = booleonArray;
+        const mixedArray = [true, "20", "car", "buttler"];
+        document.getElementById("initializedarrays4").innerText = mixedArray;
+
+        function myFuntion() {
+            const Task1 = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.PHIL"];
+            document.getElementById("Task1-array").innerText = Task1;
+        }
+
+        function myFuntion2() {
+            const studentNames = ["shkib", "imran", "asad"];
+            const studentScore = [320, 230, 480,];
+            var totalNumber = 500;
+
+                let percentageTaking1 = ((studentScore[0] / totalNumber) * 100) + "%";
+                let percentageTaking2 = ((studentScore[1] / totalNumber) * 100) + "%";
+                let percentageTaking3 = ((studentScore[2] / totalNumber) * 100) + "%";
+                let finalResult = `Score of ${studentNames[0]}: ${studentScore[0]}. percentage: ${percentageTaking1}`;
+                let finalResult2 = `Score of ${studentNames[1]}: ${studentScore[1]}. percentage: ${percentageTaking2}`;
+                let finalResult3 = `Score of ${studentNames[2]}: ${studentScore[2]}. percentage: ${percentageTaking3}`;
+                document.getElementById("task-2-p1").innerText = finalResult;
+                document.getElementById("task-2-p2").innerText = finalResult2;
+                document.getElementById("task-2-p3").innerText = finalResult3;
+            }
+
+
+        const colors = ["red", "blue", "black", "yellow", "orange"];
+        document.getElementById("first-array").innerText = colors;
+        document.getElementById("first-array").style.border = "1px solid red";
+
+        function myFuntion3() {
+            var addColorInBegining = prompt("enter the color you want to add at the start");
+            colors.unshift(addColorInBegining);
+            document.getElementById("second-array-by-user").innerText = colors;
+            document.getElementById("second-array-by-user").style.border = "1px solid purple";
+        }
+        function myFuntion31() {
+            var addColorAtEnd = prompt("enter color you want to add at the end");
+            colors.push(addColorAtEnd);
+            document.getElementById("third-array-by-user").innerText = colors;
+            document.getElementById("third-array-by-user").style.border = "2px solid yellow";
+        }
+
+        function myFuntion32() {
+            colors.unshift("pink", "graphite");
+            document.getElementById("fourth-array").innerText = colors;
+            document.getElementById("fourth-array").style.border = "2px solid black";
+
+        }
+        function myFuntion33() {
+            colors.unshift("pink", "graphite");
+            colors.shift(0);
+            document.getElementById("fifth-array").innerText = colors;
+            document.getElementById("fifth-array").style.border = "2px solid black";
+
+        }
+        function myFuntion34() {
+            colors.unshift("pink", "graphite");
+            colors.shift(0);
+            colors.pop()
+            document.getElementById("sixth-array").innerText = colors;
+            document.getElementById("sixth-array").style.border = "2px solid black";
+
+        }
+
+        function myFuntion35() {
+            colors.unshift("pink", "graphite");
+            colors.shift(0);
+            colors.pop()
+            var positionByuser = parseInt(prompt("please write the index number where you want to add new color"));
+            const newColorsByUser = prompt("please tell us the color you want to add at that point");
+            colors.splice(positionByuser, 0, newColorsByUser)
+            document.getElementById("seventh-array").innerText = colors;
+            document.getElementById("seventh-array").style.border = "2px solid lightblue";
+        }
+        function myFuntion36() {
+            colors.unshift("pink", "graphite");
+            colors.shift();
+            colors.pop()
+            // console.log(colors);
+            var positionByuser = parseInt(prompt("please write the index number where from you want to delete the color"));
+            var numOfColorsToDelete = parseInt(prompt("let us know how many colors you want to delete"));
+            colors.splice(positionByuser, numOfColorsToDelete)
+            document.getElementById("eighth-array").innerText = colors;
+            document.getElementById("eighth-array").style.border = "2px solid darkgreen";
+        }
+
+        const scores = [340, 539, 421, 234, 123, 143];
+        document.getElementById("task-4-array").innerText = scores;
+        function myFuntion4() {
+            const scoresOfStudents = [340, 539, 421, 234, 123, 143,];
+            scoresOfStudents.sort((a, b) => a - b);
+            document.getElementById("task-4-p").innerText = scoresOfStudents;
+
+        }
+
+        function myFuntion5() {
+            const arr = ["This", "is", "a", "cat"];
+            document.getElementById("task-5-p").innerText = arr.join(" ");
+
+        }
+
+        function myFuntion6() {
+            const menufucutrers = ["apple", "samsung", "MI", "Huwayi", "Nokia", "oppo"];
+            document.getElementById("manufucterurCompanie1").innerText = menufucutrers[0];
+            document.getElementById("manufucterurCompanie2").innerText = menufucutrers[1];
+            document.getElementById("manufucterurCompanie3").innerText = menufucutrers[2];
+            document.getElementById("manufucterurCompanie4").innerText = menufucutrers[3];
+            document.getElementById("manufucterurCompanie5").innerText = menufucutrers[4];
+            document.getElementById("manufucterurCompanie6").innerText = menufucutrers[5];
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
